@@ -21,7 +21,12 @@ app.set('view engine', 'pug');
 
 /* ====================== ROUTES ========================== */
 
-// listening to all routes
+// homepage
+app.get('/', function(req, res) {
+  res.send('Welcome to Timestamp Microservice Hompepage!');
+});
+
+// listening to all queries
 app.get('*/:q', function(req, res) {
   const q = req.params.q;
   const json_date = parseQuery(q);
