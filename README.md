@@ -1,6 +1,6 @@
 # Timestamp Microservice API
 
-Objective: Build a full stack JavaScript app that is functionally similar to  [this](https://timestamp-ms.herokuapp.com/) and deploy it to Heroku.
+Objective: Build a full stack JavaScript app that is functionally similar to [this](https://timestamp-ms.herokuapp.com/) and deploy it to Heroku.
 
 User stories:
 - I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).
