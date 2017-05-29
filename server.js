@@ -27,9 +27,7 @@ app.get('/', function(req, res) {
 
 // listening to all queries
 app.get('*/:q', function(req, res) {
-  console.log(req.params);
   const q = req.params.q;
-
   const json_date = parseQuery(q);
   res.send(json_date);
 });
@@ -43,7 +41,6 @@ app.listen(PORT, function(){
 /* ====================== FUNCTIONS ======================= */
 
 function parseQuery(q) {
-  console.log(q);
   let result = {
     unix: null,
     natural: null
@@ -52,13 +49,13 @@ function parseQuery(q) {
   // query is a number
   if (Number(q) || q === '0') {
     result.unix = parseInt(q);
-    result.natural = unixtonatural(parseInt(q));
+    result.natural = unixtonatural(parseInt(q)*1000); // to make it seconds
     return result;
   }
 
   // query is a date string
   if (Date.parse(q) + 1) {
-    result.unix = Date.parse(q);
+    result.unix = Date.parse(q) / 1000; // to make it seconds
     result.natural = unixtonatural(Date.parse(q));
     return result;
   }
