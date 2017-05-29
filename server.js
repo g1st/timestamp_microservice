@@ -12,7 +12,7 @@ const express = require('express'),
       app = express(),
 
       path = require('path'),
-      PORT = (process.ENV.PORT || 3000);
+      PORT = (process.env.PORT || 3000);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
