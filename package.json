@@ -1,15 +1,25 @@
 {
   "name": "timestamp_microservice",
   "version": "1.0.0",
-  "description": "",
+  "description": "convert user entered natural/unix date to a json object with both date formats",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "g1st",
-  "license": "ISC",
+  "author": "g1st <gintstan@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.15.3",
     "pug": "^2.0.0-rc.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g1st/timestamp_microservice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/g1st/timestamp_microservice/issues"
+  },
+  "homepage": "https://github.com/g1st/timestamp_microservice#readme"
 }
